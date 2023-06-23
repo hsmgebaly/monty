@@ -23,23 +23,24 @@ extern char **op_toks;
  */
 typedef struct stack_s
 {
-	int n;
-	struct stack_s *prev;
-	struct stack_s *next;
+        int n;
+        struct stack_s *prev;
+        struct stack_s *next;
 } stack_t;
 
 /**
- * struct instruction_s - Refers to the opcode and its function
- * @opcode: for the opcode
- * @f: For the function which handle the opcode
- * Description: the opcode and its function for stack,
- * queues, LIFO, FIFO Holberton project
+ * struct instruction_s - opcode and its function
+ * @opcode: the opcode
+ * @f: function to handle the opcode
+ *
+ * Description: opcode and its function
+ * for stack, queues, LIFO, FIFO
  */
 typedef struct instruction_s
 {
-	char *opcode;
-	void (*f)(stack_t **stack, unsigned int line_number);
-} instruction_t;
+        char *opcode;
+        void (*f)(stack_t **stack, unsigned int line_number);
+} instruction_t
 
 /* 2nd THE PRIMARY FUNCTIONS OF INTERPRETER */
 
